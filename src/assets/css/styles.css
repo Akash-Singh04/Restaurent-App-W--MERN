@@ -1,5 +1,9 @@
 
-
+body{
+  padding: 0;
+  margin : 0;
+  background-color: #BBE1FA;
+}
 /* Social Links */
 
   ul {
@@ -7,19 +11,19 @@
     display: flex;
   }
   
-  ul li {
+  .socialicon{
     position: relative;
     list-style: none;
     margin: 0 20px;
     cursor: pointer;
   }
   
-  ul li a {
+  .socialicon a {
     text-decoration: none;
   }
   
   
-  ul li a::before {
+  .socialicon a::before {
     font-family: "FontAwesome";
     position: absolute;
     top: 0;
@@ -31,7 +35,7 @@
   }
 
   
-  ul li:hover a::before {
+  .socialicon:hover a::before {
     height: 100%;
   }
 
@@ -44,12 +48,12 @@
     padding: 1%;
   }
 
-  ul li:nth-child(4) a{
+  .socialicon:nth-child(4) a{
     content: "\f08c";
     color: #0081C9;
   }
 
-  ul li:nth-child(3) a{
+  .socialicon:nth-child(3) a{
     content: "\f16d";
     color: linear-gradient(
       45deg,
@@ -64,12 +68,12 @@
     -webkit-text-fill-color: transparent;
     }
   
-  ul li:nth-child(2) a {
+  .socialicon:nth-child(2) a {
     content: "\f09b";
     color: #ECE8DD;
   }
   
-  ul li:nth-child(1) a{
+  .socialicon:nth-child(1) a{
     content: "\f099";
     color: #1da1f2;
   }

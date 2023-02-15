@@ -1,5 +1,5 @@
-import SocialIcons from './components/socialicons'
-import ResponsiveAppBar from './components/navbar'
+import SocialIcons from './socialicons'
+import ResponsiveAppBar from './navbar'
 
 function App() {
   return (

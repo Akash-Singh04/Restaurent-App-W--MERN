@@ -1,0 +1,12 @@
+finish frontend design
+create a login page
+create a register page
+create an about page
+create an contact page
+figure out how to get user auth here
+figure out how to set express backend on react server
+figure out how to connect mongodb to all of this
+okay so user will have name wagera, i want that image he uploads to be the avatar
+now we need to store the items the user has added to cart
+now when he checksout cart i want to get an email
+okay wtf thats a lot of work

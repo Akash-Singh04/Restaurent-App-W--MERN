@@ -11,10 +11,60 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import FoodBankIcon from '@mui/icons-material/FoodBank';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const theme = createTheme({
+  status: {
+    danger: '#e53e3e',
+  },
+  palette: {
+    primary: {
+      main: '#0F4C75',
+      darker: '#053e85',
+    },
+    neutral: {
+      main: '#64748B',
+      contrastText: '#fff',
+    },
+  },
+});
+
+declare module '@mui/material/styles' {
+  interface Theme {
+    status: {
+      danger: React.CSSProperties['color'];
+    };
+  }
+
+  interface Palette {
+    neutral: Palette['primary'];
+  }
+
+  interface PaletteOptions {
+    neutral: PaletteOptions['primary'];
+  }
+
+  interface PaletteColor {
+    darker?: string;
+  }
+
+  interface SimplePaletteColorOptions {
+    darker?: string;
+  }
+
+  interface ThemeOptions {
+    status: {
+      danger: React.CSSProperties['color'];
+    };
+  }
+}
+
+
+
+const pages = ['About Akash', 'Contact Akash', 'More Akash'];
+const settings = ['Profile', 'Account', 'Dashboard','Login', 'Logout',];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -36,10 +86,15 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <ThemeProvider theme={theme}>
+    
+    <AppBar position="static" color="primary" >
+      
+    
+
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <FoodBankIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -55,7 +110,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            *Name of Restaurent*
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -94,7 +149,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <FoodBankIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -111,7 +166,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            *Name of Restaurent*
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -157,6 +212,8 @@ function ResponsiveAppBar() {
         </Toolbar>
       </Container>
     </AppBar>
+    </ThemeProvider>
+    
   );
 }
 export default ResponsiveAppBar;
