@@ -6,16 +6,16 @@ function SocialIcons(){
     return(
         <div className="social_links">
             <ul>
-                <li class="socialicon">
+                <li className="socialicon">
                     <a href="https://twitter.com/Kind_Of_Akash"><TwitterIcon /></a>
                 </li>
-                <li class="socialicon">
+                <li className="socialicon">
                     <a href="https://github.com/Akash-Singh04"><GitHubIcon /></a>
                 </li>
-                <li class="socialicon">
+                <li className="socialicon">
                     <a href="https://www.instagram.com/kind.of.akash/"><InstagramIcon /></a>
                 </li>
-                <li class="socialicon">
+                <li className="socialicon">
                     <a href="https://www.linkedin.com/in/akash-singh-a57081253/"><LinkedInIcon /></a>
                 </li>
             </ul>
