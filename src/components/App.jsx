@@ -1,13 +1,11 @@
-import SocialIcons from './socialicons'
-import ResponsiveAppBar from './navbar'
-import MenuItemBs from './menuitemBs'
+import SocialIcons from './SocialIcons'
+import ResponsiveAppBar from './Navbar'
 import Menu from './menu'
 
 function App() {
   return (
     <div>
     <ResponsiveAppBar />
-    {/* <MenuItemBs /> */}
     <Menu />
     <SocialIcons />
     </div>
