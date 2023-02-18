@@ -2,7 +2,7 @@
 body{
   padding: 0;
   margin : 0;
-  background-color: #BBE1FA;
+  background-image: linear-gradient(to right top, #0f4c75, #3f6f95, #6893b6, #91b9d7, #bbe1fa);
   font-family: 'Lora', serif;
 }
 .title{
@@ -108,6 +108,9 @@ body{
   .food:nth-child(4), .food:nth-child(5){
     margin :15px  0px ;
   }
+  .food:nth-child(1),.food:nth-child(2),.food:nth-child(3){
+    margin: 20px 0px;
+  }
   
   /* Food Hover Effect */
 
@@ -121,6 +124,9 @@ body{
     transition-duration: 0.5s;
     -webkit-transition-property: box-shadow, transform;
     transition-property: box-shadow, transform;
+  }
+  .hvr-grow-shadow:hover .title{
+    display: none;
   }
   .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);

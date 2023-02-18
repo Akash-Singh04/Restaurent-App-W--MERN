@@ -1,3 +1,6 @@
+add styling to the headings 
+add buttons to all cards
+make the navbar buttons work
 finish frontend design
 create a login page
 create a register page
