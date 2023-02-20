@@ -65,7 +65,7 @@ declare module '@mui/material/styles' {
 
 const pages = ['About Akash', 'Contact Akash', 'More Akash'];
 const settings = ['Profile', 'Account', 'Dashboard','Login', 'Logout',];
-const pageslink =['about','contact','https://https://akashsingh.pythonanywhere.com/']
+const pageslink =['about','contact','https://akashsingh.pythonanywhere.com/']
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);

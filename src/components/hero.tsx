@@ -1,60 +1,24 @@
-import { createTheme } from '@mui/material/styles';
-import { ThemeProvider } from '@emotion/react';
 import React from 'react';
 
-const theme = createTheme({
-  status: {
-    danger: '#e53e3e',
-  },
-  palette: {
-    primary: {
-      main: '#0F4C75',
-      darker: '#053e85',
-    },
-    neutral: {
-      main: '#64748B',
-      contrastText: '#fff',
-    },
-  },
-});
-
-declare module '@mui/material/styles' {
-  interface Theme {
-    status: {
-      danger: React.CSSProperties['color'];
-    };
-  }
-
-  interface Palette {
-    neutral: Palette['primary'];
-  }
-
-  interface PaletteOptions {
-    neutral: PaletteOptions['primary'];
-  }
-
-  interface PaletteColor {
-    darker?: string;
-  }
-
-  interface SimplePaletteColorOptions {
-    darker?: string;
-  }
-
-  interface ThemeOptions {
-    status: {
-      danger: React.CSSProperties['color'];
-    };
-  }
+const myStyle={
+  backgroundImage: 
+"url('/src/images/index.jpg')"
 }
 
 function Hero(){
     return(
-        <ThemeProvider theme={theme}>
-        <div color="primary">
-            <h1>Hi!</h1>
-        </div>
-        </ThemeProvider>
+      <header className="masthead" style={myStyle}>
+      <div className="container position-relative px-4 px-lg-5">
+          <div className="row gx-4 gx-lg-5 justify-content-center">
+              <div className="col-md-10 col-lg-8 col-xl-7">
+                  <div className="site-heading">
+                      <h1>Once Upon A Flame</h1>
+                      <span className="subheading">For Your Midnight And Midday Cravings</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
     )
 }
 
