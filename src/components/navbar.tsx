@@ -65,6 +65,7 @@ declare module '@mui/material/styles' {
 
 const pages = ['About Akash', 'Contact Akash', 'More Akash'];
 const settings = ['Profile', 'Account', 'Dashboard','Login', 'Logout',];
+const pageslink =['about','contact','https://https://akashsingh.pythonanywhere.com/']
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -98,8 +99,6 @@ function ResponsiveAppBar() {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr:6,
               ml:6,
@@ -143,10 +142,12 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page,index) => (
+                <a href={pageslink[index]}>
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
+                </a>
               ))}
             </Menu>
           </Box>
@@ -154,8 +155,6 @@ function ResponsiveAppBar() {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href=""
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -170,7 +169,8 @@ function ResponsiveAppBar() {
             Once Upon a Flame
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map((page,index) => (
+              <a href={pageslink[index]}>
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -178,6 +178,7 @@ function ResponsiveAppBar() {
               >
                 {page}
               </Button>
+              </a>
             ))}
           </Box>
 

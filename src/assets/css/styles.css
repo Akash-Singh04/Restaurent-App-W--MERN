@@ -8,6 +8,9 @@ body{
 .title{
   font-family: 'Montserrat', sans-serif;
 }
+a{
+  text-decoration: none;
+}
 /* Social Links */
 
   ul {
@@ -115,6 +118,7 @@ body{
   /* Food Hover Effect */
 
   .hvr-grow-shadow {
+    cursor: pointer;
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -128,8 +132,66 @@ body{
   .hvr-grow-shadow:hover .title{
     display: none;
   }
+  .hvr-grow-shadow:hover .hvr-grow-shadow:not(:hover){
+    z-index: -1;
+    opacity: 0.9;
+  }
+
+  .hvr-grow-shadow:hover + .hvr-grow-shadow{
+    z-index: -1;
+    opacity: 0.9;
+  }
+
+  .hvr-grow-shadow:hover ~ .hvr-grow-shadow{
+    z-index: -1;
+    opacity: 0.9;
+  }
+
+
+
   .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+  }
+
+  /* Cusine Menu Css */
+  .cardwrapper{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B262C;
+  padding: 10px;
+  }
+  #cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 916px;
+    width: calc(100% -20px);
+  }
+  .card{
+    background-color: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 260px;
+    width: 300px;
+    position: relative;
+  }
+
+  .card::before{
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255,255,255,0.06),
+      transparent 40%
+    );
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
   }
